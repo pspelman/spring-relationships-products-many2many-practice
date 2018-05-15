@@ -19,6 +19,21 @@ public class Category {
     private Date createdAt;
     private Date updatedAt;
 
+
+    @PrePersist
+    protected void onCreate(){
+        this.createdAt = new Date();
+        this.updatedAt = this.createdAt;
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedAt = new Date();
+    }
+
+
+
+
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<CategoryProduct> categoriesProducts;

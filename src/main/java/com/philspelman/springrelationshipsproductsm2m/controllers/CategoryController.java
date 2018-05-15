@@ -24,13 +24,13 @@ public class CategoryController {
     //todo: CRUD routes
 
 
-    @RequestMapping("/categories/new")
+    @RequestMapping("/new")
     public String newCategory(@ModelAttribute("category") Category category) {
 
-        return "categoryFormNew";
+        return "formCategoryNew";
     }
 
-    @PostMapping("/categories/new")
+    @PostMapping("/new")
     public String newCategory(@Valid @ModelAttribute("category") Category category, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "categoryFormNew";
@@ -40,7 +40,7 @@ public class CategoryController {
         }
     }
 
-    @RequestMapping("/category/delete/{id}")
+    @RequestMapping("/delete/{id}")
     public String deleteCategory(@PathVariable("id") Long id) {
         categoryService.destroyCategory(id);
         return "redirect:/";

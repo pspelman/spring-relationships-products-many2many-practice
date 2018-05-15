@@ -9,6 +9,12 @@
 
 }
 
+.top_nav {
+    width: 60%;
+    margin: auto;
+
+}
+
 .home_container {
     /*background-color: rgba(131, 188, 188, 0.72);*/
     /*background: transparent url(https://i.stack.imgur.com/RL5UH.png) 50% 50% no-repeat;*/
@@ -37,4 +43,8 @@
     padding: 3% 0% 4%;    width: 60%;
     color: #d8faff;
 
+}
+
+.user_form{
+    padding: 5px;
 }

@@ -24,7 +24,7 @@
         <br/>
         <br/>
         <button name="new_dojo" class="btn-inverse" value="New Product" onclick="location.href='/products/new';">New Product</button>
-        <button name="new_ninja" class="btn-inverse" value="New Ninja" onclick="location.href='/products/new';">New Category</button>
+        <button name="new_category" class="btn-inverse" value="New Category" onclick="location.href='/categories/new';">New Category</button>
 
         <br/>
         <br/>

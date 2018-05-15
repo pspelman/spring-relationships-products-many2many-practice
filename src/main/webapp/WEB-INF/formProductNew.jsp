@@ -16,7 +16,7 @@
     <%--<link rel="stylesheet" href="../../resources/static/css/style.css">--%>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/scripts.js"></script>
-    <title>New Ninja Form</title>
+    <title>New Product Form</title>
 </head>
 <body>
 <div class="container">
@@ -33,20 +33,20 @@
             <%--<form:select path="category" items="${categories}" itemLabel="name" ></form:select>--%>
             <%--<br/>--%>
 
-            <%--<form:label path="firstName">First Name</form:label>--%>
-            <%--<form:input path="firstName" /><br/>--%>
-            <%--<form:errors path="firstName" cssClass="alert-danger" />--%>
+            <form:label path="name">Product Name</form:label>
+            <form:input path="name" /><br/>
+            <form:errors path="name" cssClass="alert-danger" />
 
-            <%--<form:label path="lastName">Last Name</form:label>--%>
-            <%--<form:input path="lastName" /><br/>--%>
-            <%--<form:errors path="lastName" cssClass="alert-danger" />--%>
+            <form:label path="description">Description</form:label>
+            <form:input path="description" /><br/>
+            <form:errors path="description" cssClass="alert-danger" />
 
-            <%--<form:label path="age">Age</form:label>--%>
-            <%--<form:input path="age" /><br/>--%>
-            <%--<form:errors path="age" cssClass="alert-danger" />--%>
-            <%--<br/>--%>
+            <form:label path="price">Price ($)</form:label>
+            <form:input path="price" /><br/>
+            <form:errors path="price" cssClass="alert-danger" />
+            <br/>
 
-            <%--<input type="submit">--%>
+            <input type="submit" value="create">
 
         </form:form>
     </div>
