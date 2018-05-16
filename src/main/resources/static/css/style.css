@@ -48,3 +48,14 @@
 .user_form{
     padding: 5px;
 }
+
+.associatedItemsList {
+    border: 2px solid red;
+    vertical-align: top;
+}
+
+.addAssociatedItemForm {
+    border: 2px solid blue;
+    vertical-align: top;
+
+}

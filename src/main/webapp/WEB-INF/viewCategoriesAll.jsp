@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/scripts.js"></script>
 
-    <title>All Products</title>
+    <title>All Categories</title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@ ${search_errors}
             </jsp:attribute>
     </t:generic_navbar>
     <br/>
-    <div class="allProductsList">
+    <div class="allCategoriesList">
         <%--${loop.index+1}. ${song} <br/>--%>
         <h3>All Peeps</h3>
         <table class="table table-bordered">
@@ -36,15 +36,6 @@ ${search_errors}
                 <th scope="col">
                     Name
                 </th>
-                <th scope="col">
-                    Description
-                </th>
-                <th scope="col">
-                    Price
-                </th>
-                <th scope="col">
-                    Action
-                </th>
             </tr>
             </thead>
             <tbody>
@@ -54,22 +45,8 @@ ${search_errors}
                     <th scope="row">
                             ${loop.index+1}
                     </th>
-                    <th scope="row">
-                            <a href="/products/view/${product.id}">${product.name}</a>
-                            <%--${product.name}--%>
-
-                    </th>
-                    <td>
-                            ${product.description}
-
-                    </td>
-                    <td>
-                            <fmt:formatNumber type="CURRENCY">${product.price}</fmt:formatNumber>
-                            <%--License Number { ex: 001234 }--%>
-                    </td>
-                    <td>
-                        <button name="delete" class="table-btn btn-danger" value="Delete" onclick="location.href='/products/delete/${product.id}';">remove</button>
-
+                    <td scope="row">
+                        <a href="/categories/view/${category.id}">${category.name}</a>
                     </td>
                 </tr>
             </c:forEach>

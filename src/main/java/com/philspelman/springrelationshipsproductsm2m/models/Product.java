@@ -49,6 +49,12 @@ public class Product {
 
     }
 
+    public Product(String name, String description, float price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
     public Long getId() {
         return id;
     }
