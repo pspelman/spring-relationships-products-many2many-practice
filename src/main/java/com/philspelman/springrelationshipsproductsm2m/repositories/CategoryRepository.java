@@ -1,7 +1,7 @@
 package com.philspelman.springrelationshipsproductsm2m.repositories;
 
 import com.philspelman.springrelationshipsproductsm2m.models.Category;
-import com.philspelman.springrelationshipsproductsm2m.models.CategoryProduct;
+import com.philspelman.springrelationshipsproductsm2m.models.CategoryProductIdentity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

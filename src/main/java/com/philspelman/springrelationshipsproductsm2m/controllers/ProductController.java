@@ -1,7 +1,7 @@
 package com.philspelman.springrelationshipsproductsm2m.controllers;
 
 import com.philspelman.springrelationshipsproductsm2m.models.Category;
-import com.philspelman.springrelationshipsproductsm2m.models.CategoryProduct;
+import com.philspelman.springrelationshipsproductsm2m.models.CategoryProductIdentity;
 import com.philspelman.springrelationshipsproductsm2m.models.Product;
 import com.philspelman.springrelationshipsproductsm2m.repositories.CategoryProductRepository;
 import com.philspelman.springrelationshipsproductsm2m.services.CategoryService;

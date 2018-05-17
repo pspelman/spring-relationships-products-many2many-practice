@@ -23,15 +23,16 @@ public class ProductService {
 
         if (this.productRepository.findAll().size() < 1) {
             //add some new products
-            addNewProducts();
+            System.out.println("No products!");
+//            addNewProducts();
         }
     }
-    private void addNewProducts() {
-        this.productRepository.save(new Product("Shoe", "Nike", 50));
-        this.productRepository.save(new Product("Turtle", "A ninja", 10));
-        this.productRepository.save(new Product("Hammer", "A way to tell time", 2));
-
-    }
+//    private void addNewProducts() {
+//        this.productRepository.save(new Product("Shoe", "Nike", 50));
+//        this.productRepository.save(new Product("Turtle", "A ninja", 10));
+//        this.productRepository.save(new Product("Hammer", "A way to tell time", 2));
+//
+//    }
 
 
     public void addProduct(Product product) {

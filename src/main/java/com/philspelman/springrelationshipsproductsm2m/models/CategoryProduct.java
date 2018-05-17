@@ -1,27 +1,38 @@
 package com.philspelman.springrelationshipsproductsm2m.models;
 
+import org.hibernate.annotations.NaturalId;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "categories_products")
+@Table(name="categories_products")
 public class CategoryProduct {
 
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
-    @Column(updatable = false)
+    @Column(updatable=false)
     private Date createdAt;
     private Date updatedAt;
-
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name="product_id")
     private Product product;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name="category_id")
     private Category category;
+
+    public CategoryProduct() {
+
+    }
+
+    public CategoryProduct(Product product, Category category) {
+        this.product = product;
+        this.category = category;
+    }
 
     public Long getId() {
         return id;
@@ -63,7 +74,14 @@ public class CategoryProduct {
         this.category = category;
     }
 
-    public CategoryProduct() {
+    @Override
+    public String toString() {
+        return String.format("CatProd: id: %d, product_id: %d, category_id: %d", this.id, this.category.getId(), this.product.getId());
 
     }
+
+// ...
+    // getters and setters removed for brevity
+    // ...
 }
+

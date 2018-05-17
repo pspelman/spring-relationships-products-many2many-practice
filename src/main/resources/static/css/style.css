@@ -3,6 +3,7 @@
 .home_container {
     background-color: rgba(131, 188, 188, 0.72);
     text-align: center;
+    margin: auto;
 
     padding-top: 5%;
     padding-bottom: 5%;
@@ -12,6 +13,14 @@
 .top_nav {
     width: 60%;
     margin: auto;
+
+}
+
+.container {
+    background: rgba(255, 165, 0, 0.6) url(../img/fart-can-plate.png) 50% 50%;
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
 
 }
 
@@ -45,17 +54,30 @@
 
 }
 
+.body_content {
+    margin:auto;
+    width: 90%;
+    /*border: 2px solid green;*/
+    text-align: center;
+}
+
 .user_form{
     padding: 5px;
 }
 
 .associatedItemsList {
     border: 2px solid red;
+    width: 40%;
+    display: inline-block;
     vertical-align: top;
+    margin:auto;
 }
 
 .addAssociatedItemForm {
     border: 2px solid blue;
+    width: 40%;
+    display: inline-block;
     vertical-align: top;
+    margin:auto;
 
 }

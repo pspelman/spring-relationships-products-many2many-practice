@@ -24,28 +24,34 @@ ${search_errors}
             </jsp:attribute>
     </t:generic_navbar>
     <br/>
-    <h3>SINGLE PRODUCT
-        AND ASSOCIATED CATEGORIES
-    </h3>
-    <div class="associatedItemsList">
-        <h4>${product.name} is in these categories:</h4>
-        <c:forEach var="categoryProduct" items="${product.getCategoriesProducts()}" varStatus="loop">
-            <%--${category.getName()}<br/>--%>
-            <a href="/categories/view/${categoryProduct.getCategory().getId()}">${categoryProduct.getCategory().name}</a><br/>
+    <div class="body_content">
 
-        </c:forEach>
+        <h3>SINGLE PRODUCT
+            AND ASSOCIATED CATEGORIES
+        </h3>
+        <br/>
+        <div class="associatedItemsList">
+            <h4>${product.name} is in these categories:</h4>
+            <c:forEach var="categoryProduct" items="${product.getCategoriesProducts()}" varStatus="loop">
+                <%--${category.getName()}<br/>--%>
+                <a href="/categories/view/${categoryProduct.getCategory().getId()}">${categoryProduct.getCategory().name}</a><br/>
+
+            </c:forEach>
+        </div>
+
+        <div class="addAssociatedItemForm">
+            <h4>Unassigned categories</h4>
+            <c:forEach var="category" items="${categories}" varStatus="loop">
+                <%--${category.getName()}<br/>--%>
+                <%--<a href="/categories/view/${category.id}">${category.name}</a><br/>--%>
+                Assign to: <a href="/categories/add_product_to_category/${product.id}/${category.id}">${category.name}</a><br/>
+            </c:forEach>
+
+        </div>
+
+
+
     </div>
-
-    <div class="addAssociatedItemForm">
-        <h4>Unassigned categories</h4>
-        <c:forEach var="category" items="${categories}" varStatus="loop">
-            <%--${category.getName()}<br/>--%>
-            <%--<a href="/categories/view/${category.id}">${category.name}</a><br/>--%>
-            Assign to: <a href="/categories/add_product_to_category/${product.id}/${category.id}">${category.name}</a><br/>
-        </c:forEach>
-
-    </div>
-
 
 
     <%--<div class="allProductsList">--%>
